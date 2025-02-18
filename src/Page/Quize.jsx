@@ -26,7 +26,7 @@ export default function Quize() {
 
    
     return () => clearInterval(interval);
-   },[])
+   },[timer,score])
 
     const clickHandler = () => {
         const nextIndex = data.indexOf(currentQuestion) + 1;
