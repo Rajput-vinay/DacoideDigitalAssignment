@@ -17,3 +17,15 @@ A fast and interactive quiz application with a **30-second timer per question**.
 - **IndexedDB** (Local Storage for past results)
 - **CSS / Tailwind** (Styling)
 
+1. **Clone this repository:**:
+   ```bash
+   git clone https://github.com/Rajput-vinay/DacoideDigitalAssignment.git
+   cd quiz-app
+   
+2. **Install Dependencies:**:
+    ```bash
+    npm install
+
+3. **Start the Development Server**:
+    ```bash
+    npm start
