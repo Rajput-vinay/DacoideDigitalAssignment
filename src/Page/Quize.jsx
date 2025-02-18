@@ -26,7 +26,7 @@ export default function Quize() {
 
    
     return () => clearInterval(interval);
-   },[timer,quizEnded])
+   },[])
 
     const clickHandler = () => {
         const nextIndex = data.indexOf(currentQuestion) + 1;
@@ -73,8 +73,8 @@ export default function Quize() {
     };
 
     useEffect(() => {
-        console.log("Updated Score:", score);
-    }, [score,timer]); // Runs whenever score changes
+        
+    }, [score]); // Runs whenever score changes
 
 
     if (quizEnded) {

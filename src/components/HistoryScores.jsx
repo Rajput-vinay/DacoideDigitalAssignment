@@ -19,7 +19,7 @@ export default function HistoryScores() {
     fetchScores();
   }, []);
 
-  console.log("history score", scores);
+
 
   return (
     <div className="max-w-5xl
@@ -32,7 +32,7 @@ export default function HistoryScores() {
         scores.map((score, index) => (
           <Card key={index} >
             <p className="text-lg font-bold  text-white">Attempt #{index + 1}</p>
-            <p className="text-md text-white ">Score: {score.score} / {score.totalQuestions}</p>
+            <p className="text-md text-white ">Score: {score.score +1} / {score.totalQuestions}</p>
             <p className="text-md text-white">
               Date: {new Date(score.timestamp).toLocaleDateString()}
             </p>
