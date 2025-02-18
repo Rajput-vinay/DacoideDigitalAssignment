@@ -42,41 +42,38 @@ export default function Quize() {
     };
 
     const handleOptionClick = (selectedOption) => {
-       
-        //  store the attempted question in history
-
-        setHistory((prevHistory) => [
-            ...prevHistory,
-            {
-              question: currentQuestion.question,
-              selectedAnswer: selectedOption,
-              correctAnswer: currentQuestion.answer,
-              isCorrect: selectedOption === currentQuestion.answer,
-            },
-          ]);
-
-
-
         let isCorrect = false;
-
+    
         if (currentQuestion.type === "integer") {
             isCorrect = parseInt(currentQuestion.answer) === parseInt(selectedOption);
         } else {
             isCorrect = selectedOption === currentQuestion.answer;
         }
-
+    
+       
+        setHistory((prevHistory) => [
+            ...prevHistory,
+            {
+                question: currentQuestion.question,
+                selectedAnswer: selectedOption,
+                correctAnswer: currentQuestion.answer,
+                isCorrect: isCorrect, 
+            },
+        ]);
+    
         if (isCorrect) {
             setScore((prevScore) => prevScore + 1);
         }
-
+    
         clickHandler();
     };
+    
 
     useEffect(() => {
         
-    }, [score]); // Runs whenever score changes
+    }, [score]); 
 
-
+ console.log("history",history)
     if (quizEnded) {
         const incorrect = data.length - score; 
         return (
