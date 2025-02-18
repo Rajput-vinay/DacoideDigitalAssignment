@@ -1,9 +1,19 @@
-# React + Vite
+# 🧠 Quiz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast and interactive quiz application with a **30-second timer per question**. Once you select an answer, the quiz automatically moves to the next question. At the end, you can review the correct answers and compare your results with your last attempt, which is stored using **IndexedDB**.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# DacoideDigitalAssignment
+- ⏳ **30-second timer** for each question.
+- ✅ **Auto-advance** to the next question upon selecting an answer.
+- 📊 **Results & Review**:
+  - View correct answers at the end of the quiz.
+  - Compare your latest attempt with the **previous result**.
+- 💾 **Persistent Data Storage** using IndexedDB.
+
+## 🛠️ Technologies Used
+
+- **React.js** (Frontend)
+- **IndexedDB** (Local Storage for past results)
+- **CSS / Tailwind** (Styling)
+
